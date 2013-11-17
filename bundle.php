@@ -1,5 +1,5 @@
 <?php
-namespace App\Menu;
+namespace Coxis\Menu;
 
 class Bundle extends \Coxis\Core\BundleLoader {
 	public function run() {
