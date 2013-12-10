@@ -3,7 +3,7 @@
 @Prefix('admin/menus')
 */
 class MenuAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'menu';
+	static $_model = 'Coxis\Menu\Models\Menu';
 	static $_models = 'menus';
 
 	function __construct() {

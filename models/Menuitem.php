@@ -23,15 +23,15 @@ class Menuitem extends \Coxis\Core\Model {
 	public static $relations = array(	
 		'menu' => array(
 			'has'	=>	'one',
-			'model'	=>	'Menu',
+			'model'	=>	'Coxis\Menu\Models\Menu',
 		),
 		'parent' => array(
 			'has'	=>	'one',
-			'model'	=>	'MenuItem',
+			'model'	=>	'Coxis\Menu\Models\MenuItem',
 		),
 		'childs' => array(
 			'has'	=>	'many',
-			'model'	=>	'MenuItem',
+			'model'	=>	'Coxis\Menu\Models\MenuItem',
 		),
 		'item' => array(
 			'type'	=>	'belongsTo',

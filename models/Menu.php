@@ -7,7 +7,7 @@ class Menu extends \Coxis\Core\Model {
 	public static $relations = array(	
 		'items' => array(
 			'has'	=>	'many',
-			'model'	=>	'MenuItem',
+			'model'	=>	'Coxis\Menu\Models\MenuItem',
 		),
 	);
 	
