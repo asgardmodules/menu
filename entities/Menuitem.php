@@ -1,5 +1,5 @@
 <?php
-class Menuitem extends \Coxis\Core\Model {
+class Menuitem extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'title'	=>	array(
 			'required'	=>	false,
@@ -23,25 +23,25 @@ class Menuitem extends \Coxis\Core\Model {
 	public static $relations = array(	
 		'menu' => array(
 			'has'	=>	'one',
-			'model'	=>	'Coxis\Menu\Models\Menu',
+			'entity'	=>	'Coxis\Menu\Entities\Menu',
 		),
 		'parent' => array(
 			'has'	=>	'one',
-			'model'	=>	'Coxis\Menu\Models\MenuItem',
+			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
 		),
 		'childs' => array(
 			'has'	=>	'many',
-			'model'	=>	'Coxis\Menu\Models\MenuItem',
+			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
 		),
 		'item' => array(
 			'type'	=>	'belongsTo',
 			'polymorphic'	=>	true,
-			'model'	=>	'menuitemable',
+			'entity'	=>	'menuitemable',
 		),
 	);
 	
 	public static $behaviors = array(
-		'sortable'
+		'Coxis\Behaviors\SortableBehavior'
 	);
 		
 	public static $meta = array(

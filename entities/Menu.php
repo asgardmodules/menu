@@ -1,5 +1,5 @@
 <?php
-class Menu extends \Coxis\Core\Model {
+class Menu extends \Coxis\Core\Entity {
 	public static $properties = array(
 		'name',
 	);
@@ -7,7 +7,7 @@ class Menu extends \Coxis\Core\Model {
 	public static $relations = array(	
 		'items' => array(
 			'has'	=>	'many',
-			'model'	=>	'Coxis\Menu\Models\MenuItem',
+			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
 		),
 	);
 	

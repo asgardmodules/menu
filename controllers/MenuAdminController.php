@@ -2,9 +2,9 @@
 /**
 @Prefix('admin/menus')
 */
-class MenuAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminController {
-	static $_model = 'Coxis\Menu\Models\Menu';
-	static $_models = 'menus';
+class MenuAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Coxis\Menu\Entities\Menu';
+	static $_entities = 'menus';
 
 	function __construct() {
 		$this->_messages = array(
@@ -17,8 +17,8 @@ class MenuAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminControl
 		parent::__construct();
 	}
 	
-	public function formConfigure($model) {
-		$form = new \Coxis\Admin\Libs\Form\AdminModelForm($model, $this);
+	public function formConfigure($entity) {
+		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
@@ -36,7 +36,7 @@ class MenuAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminControl
 		foreach(Page::all() as $page) {
 			$pages[$page->__toString().' ('.$page->name.')'] = array(
 				'type'	=>	'item',
-				'model'	=>	'page',
+				'entity'	=>	'page',
 				'item_id'	=>	$page->id,
 				'item_type'	=>	'page',
 			);
@@ -45,7 +45,7 @@ class MenuAdminController extends \Coxis\Admin\Libs\Controller\ModelAdminControl
 		foreach(Actualite::all() as $actualite) {
 			$actualites[$actualite->__toString()] = array(
 				'type'	=>	'item',
-				'model'	=>	'page',
+				'entity'	=>	'page',
 				'item_id'	=>	$actualite->id,
 				'item_type'	=>	'actualite',
 			);
