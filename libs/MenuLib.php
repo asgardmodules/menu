@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\Menu\Libs;
+namespace Asgard\Menu\Libs;
 
 class MenuLib {
 	protected static $menu = array();
@@ -8,7 +8,7 @@ class MenuLib {
 
 		$menu - array(
 			'pages' => array(
-				'fixed_url'	=>	\Coxis\Core\App::get('url')->to('pages/index'),
+				'fixed_url'	=>	\Asgard\Core\App::get('url')->to('pages/index'),
 			)
 		);
 	}

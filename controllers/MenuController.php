@@ -2,7 +2,7 @@
 /**
 @Prefix('menus')
 */
-class MenuController extends \Coxis\Core\Controller {
+class MenuController extends \Asgard\Core\Controller {
 	/**
 	@Route('')
 	*/

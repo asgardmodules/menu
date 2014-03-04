@@ -10,7 +10,7 @@
 					<a href="<?php echo !$menu->isNew() ? $this->url_for('edit', array('id'=>$menu->id)):$this->url_for('new') ?>">
 					<?php echo !$original->isNew() ? $original:__('New') ?>
 					</a></p>
-					<?php \Coxis\Core\Coxis\Core\App::get('flash')->showAll() ?>
+					<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
 					
 					<?php
 					if(_ENV_ == 'dev'):

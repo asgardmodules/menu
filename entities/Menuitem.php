@@ -1,5 +1,5 @@
 <?php
-class Menuitem extends \Coxis\Core\Entity {
+class Menuitem extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title'	=>	array(
 			'required'	=>	false,
@@ -23,15 +23,15 @@ class Menuitem extends \Coxis\Core\Entity {
 	public static $relations = array(	
 		'menu' => array(
 			'has'	=>	'one',
-			'entity'	=>	'Coxis\Menu\Entities\Menu',
+			'entity'	=>	'Asgard\Menu\Entities\Menu',
 		),
 		'parent' => array(
 			'has'	=>	'one',
-			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
+			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
 		),
 		'childs' => array(
 			'has'	=>	'many',
-			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
+			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
 		),
 		'item' => array(
 			'type'	=>	'belongsTo',
@@ -41,7 +41,7 @@ class Menuitem extends \Coxis\Core\Entity {
 	);
 	
 	public static $behaviors = array(
-		'Coxis\Behaviors\SortableBehavior'
+		'Asgard\Behaviors\SortableBehavior'
 	);
 		
 	public static $meta = array(

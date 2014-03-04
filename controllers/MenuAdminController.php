@@ -2,8 +2,8 @@
 /**
 @Prefix('admin/menus')
 */
-class MenuAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'Coxis\Menu\Entities\Menu';
+class MenuAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+	static $_entity = 'Asgard\Menu\Entities\Menu';
 	static $_entities = 'menus';
 
 	function __construct() {
@@ -18,7 +18,7 @@ class MenuAdminController extends \Coxis\Admin\Libs\Controller\EntityAdminContro
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Coxis\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}

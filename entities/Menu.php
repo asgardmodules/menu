@@ -1,5 +1,5 @@
 <?php
-class Menu extends \Coxis\Core\Entity {
+class Menu extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'name',
 	);
@@ -7,7 +7,7 @@ class Menu extends \Coxis\Core\Entity {
 	public static $relations = array(	
 		'items' => array(
 			'has'	=>	'many',
-			'entity'	=>	'Coxis\Menu\Entities\MenuItem',
+			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
 		),
 	);
 	
@@ -106,7 +106,7 @@ class Menu extends \Coxis\Core\Entity {
 	}
 
 	public function active($item) {
-		return $item->url() == \Coxis\Core\App::get('url')->get();
+		return $item->url() == \Asgard\Core\App::get('url')->get();
 		// ...
 	}
 }
