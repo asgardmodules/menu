@@ -106,7 +106,7 @@ class Menu extends \Coxis\Core\Entity {
 	}
 
 	public function active($item) {
-		return $item->url() == \URL::get();
+		return $item->url() == \Coxis\Core\App::get('url')->get();
 		// ...
 	}
 }

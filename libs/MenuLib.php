@@ -8,7 +8,7 @@ class MenuLib {
 
 		$menu - array(
 			'pages' => array(
-				'fixed_url'	=>	\URL::to('pages/index'),
+				'fixed_url'	=>	\Coxis\Core\App::get('url')->to('pages/index'),
 			)
 		);
 	}

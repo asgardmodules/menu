@@ -2,7 +2,7 @@
 /**
 @Prefix('menus')
 */
-class MenuController extends Controller {
+class MenuController extends \Coxis\Core\Controller {
 	/**
 	@Route('')
 	*/
