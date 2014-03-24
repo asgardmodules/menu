@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\Menu\Entities;
+
 class Menu extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'name',
@@ -7,7 +9,7 @@ class Menu extends \Asgard\Core\Entity {
 	public static $relations = array(	
 		'items' => array(
 			'has'	=>	'many',
-			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
+			'entity'	=>	'Asgard\Menu\Entities\Menuitem',
 		),
 	);
 	

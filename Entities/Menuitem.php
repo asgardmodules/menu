@@ -1,4 +1,6 @@
 <?php
+namespace Asgard\Menu\Entities;
+
 class Menuitem extends \Asgard\Core\Entity {
 	public static $properties = array(
 		'title'	=>	array(
