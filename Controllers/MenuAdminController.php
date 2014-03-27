@@ -6,7 +6,7 @@ class MenuAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminContr
 	static $_entity = 'Asgard\Menu\Entities\Menu';
 	static $_entities = 'menus';
 
-	function __construct() {
+	public function __construct() {
 		$this->_messages = array(
 					'modified'			=>	__('Menu modified with success.'),
 					'created'			=>	__('Menu created with success.'),
