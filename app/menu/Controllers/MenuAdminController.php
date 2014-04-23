@@ -2,7 +2,7 @@
 /**
 @Prefix('admin/menus')
 */
-class MenuAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminController {
+class MenuAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
 	static $_entity = 'Asgard\Menu\Entities\Menu';
 	static $_entities = 'menus';
 
@@ -18,7 +18,7 @@ class MenuAdminController extends \Asgard\Admin\Libs\Controller\EntityAdminContr
 	}
 	
 	public function formConfigure($entity) {
-		$form = new \Asgard\Admin\Libs\Form\AdminEntityForm($entity, $this);
+		$form = new \App\Admin\Libs\Form\AdminEntityForm($entity, $this);
 		
 		return $form;
 	}
