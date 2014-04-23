@@ -7,5 +7,5 @@ require _CORE_DIR_.'core.php';
 \Asgard\Utils\FileManager::copy(__DIR__.'/tests/MenuAdmintest.php', _DIR_.'app/MenuAdminTest.php');
 \Asgard\Utils\FileManager::copy(__DIR__.'/web/menu', _DIR_.'web/menu');
 
-\Asgard\Orm\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Menu.php');
-\Asgard\Orm\MigrationsManager::migrate('Menu');
+\Asgard\Orm\Libs\MigrationsManager::addMigrationFile(__DIR__.'/migrations/Menu.php');
+\Asgard\Orm\Libs\MigrationsManager::migrate('Menu');
