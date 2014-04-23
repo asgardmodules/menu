@@ -1,5 +1,5 @@
 <?php
-namespace Asgard\Menu\Entities;
+namespace App\Menu\Entities;
 
 class Menuitem extends \Asgard\Core\Entity {
 	public static $properties = array(
@@ -25,15 +25,15 @@ class Menuitem extends \Asgard\Core\Entity {
 	public static $relations = array(	
 		'menu' => array(
 			'has'	=>	'one',
-			'entity'	=>	'Asgard\Menu\Entities\Menu',
+			'entity'	=>	'App\Menu\Entities\Menu',
 		),
 		'parent' => array(
 			'has'	=>	'one',
-			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
+			'entity'	=>	'App\Menu\Entities\MenuItem',
 		),
 		'childs' => array(
 			'has'	=>	'many',
-			'entity'	=>	'Asgard\Menu\Entities\MenuItem',
+			'entity'	=>	'App\Menu\Entities\MenuItem',
 		),
 		'item' => array(
 			'type'	=>	'belongsTo',
