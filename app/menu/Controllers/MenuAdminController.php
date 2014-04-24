@@ -3,8 +3,8 @@
 @Prefix('admin/menus')
 */
 class MenuAdminController extends \App\Admin\Libs\Controller\EntityAdminController {
-	static $_entity = 'App\Menu\Entities\Menu';
-	static $_entities = 'menus';
+	protected $_entity = 'App\Menu\Entities\Menu';
+	protected $_entities = 'menus';
 
 	public function __construct() {
 		$this->_messages = array(

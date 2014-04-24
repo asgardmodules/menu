@@ -2,7 +2,7 @@
 				<div class="block_head">
 					<div class="bheadl"></div>
 					<div class="bheadr"></div>
-					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst(static::$_entities) ?></a></h2>
+					<h2><a href="<?php echo $this->url_for('index') ?>"><?php echo ucfirst($_entities) ?></a></h2>
 					<?php if(_ENV_ == 'dev'): ?>
 					<ul>
 						<li><a href="<?php echo $this->url_for('new') ?>"><?php echo __('Add') ?></a></li>
@@ -29,7 +29,7 @@
 						</div>	
 						<div class="block_content"> -->
 						
-							<?php \Asgard\Core\Asgard\Core\App::get('flash')->showAll() ?>
+							<?php \Asgard\Core\App::get('flash')->showAll() ?>
 						
 							<?php if(sizeof($menus) == 0): ?>
 							<div style="text-align:center; font-weight:bold"><?php echo __('No element') ?></div>
@@ -54,7 +54,7 @@
 												<td><a href="<?php echo $this->url_for('edit', array('id'=>$menu->id)) ?>"><?php echo $menu ?></a></td>
 												<td class="actions">
 													<?php if(_ENV_ == 'dev'): ?>
-													<?php \Hook::trigger('asgard_menu_actions', $menu) ?>
+													<?php \Asgard\Core\App::get('hook')->trigger('asgard_menu_actions', $menu) ?>
 													<a class="delete" href="<?php echo $this->url_for('delete', array('id'=>$menu->id)) ?>"><?php echo __('Delete') ?></a>
 													<?php endif ?>
 												</td>
